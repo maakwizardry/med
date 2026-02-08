@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medtime RCM - Medical Billing & Revenue Cycle Management Services</title>
+    <meta name="description"
+        content="Professional medical billing and RCM services. Increase collections, reduce denials, and streamline revenue cycle. HIPAA compliant. Free assessment.">
+    <meta name="keywords"
+        content="medical billing, revenue cycle management, RCM, healthcare billing, claims management">
+    <link rel="canonical" href="https://medtimercm.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Medtime RCM - Medical Billing Solutions">
+    <meta property="og:description" content="Professional RCM services for healthcare providers">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://medtimercm.com/">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Tailwind CSS (CDN for Dev) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0066CC',
+                        'primary-dark': '#004A99',
+                        'accent': '#00A86B',
+                        'neutral': '#F5F7FA',
+                        'dark': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <header
+        class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-gray-100"
+        id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary flex items-center gap-2">
+                        <i data-lucide="activity" class="w-8 h-8"></i>
+                        Medtime RCM
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="about.html"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">About</a>
+                    <a href="services.html"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="why-choose-us.html"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">Why Us</a>
+                    <a href="contact.html"
+                        class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Free Assessment
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-white shadow-xl border-t border-gray-100 p-4 flex flex-col space-y-4">
+            <a href="about.html"
+                class="block text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-50">About</a>
+            <a href="services.html"
+                class="block text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-50">Services</a>
+            <a href="why-choose-us.html"
+                class="block text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-50">Why Us</a>
+            <a href="contact.html"
+                class="block bg-primary text-white text-center py-3 rounded-lg font-semibold mt-4">Free
+                Assessment</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1
+                class="text-4xl md:text-5xl lg:text-7xl font-bold text-dark mb-6 tracking-tight leading-tight scroll-animate">
+                Simplifying Medical Billing. <br />
+                <span class="text-primary">Maximizing Revenue.</span> <br />
+                Saving Time.
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 scroll-animate delay-100">
+                Comprehensive RCM solutions tailored to your practice needs. Reduce denials, accelerate cash flow, and
+                focus on patient care.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center scroll-animate delay-200">
+                <a href="contact.html"
+                    class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    Request Assessment <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="services.html"
+                    class="bg-white border-2 border-gray-200 hover:border-primary text-gray-700 hover:text-primary px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1">
+                    Explore Services
+                </a>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div
+                class="mt-16 pt-8 border-t border-gray-200/60 flex flex-wrap justify-center gap-8 opacity-75 grayscale hover:grayscale-0 transition-all duration-500 scroll-animate delay-300">
+                <div class="flex items-center gap-2 font-semibold text-gray-500"><i data-lucide="shield-check"
+                        class="text-primary w-5 h-5"></i> HIPAA Compliant</div>
+                <div class="flex items-center gap-2 font-semibold text-gray-500"><i data-lucide="trending-up"
+                        class="text-accent w-5 h-5"></i> 98% Collection Rate</div>
+                <div class="flex items-center gap-2 font-semibold text-gray-500"><i data-lucide="clock"
+                        class="text-blue-500 w-5 h-5"></i> Fast Turnaround</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-2">Why Choose Medtime RCM?</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-dark">Proven Results for Medical Practices</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div
+                    class="bg-blue-50/50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group scroll-animate">
+                    <div
+                        class="w-14 h-14 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/30">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-dark">Increased Collections</h4>
+                    <p class="text-gray-600">Boost revenue with optimized billing workflows and reduced A/R days.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div
+                    class="bg-blue-50/50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group scroll-animate delay-100">
+                    <div
+                        class="w-14 h-14 bg-accent text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent/30">
+                        <i data-lucide="lock" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-dark">HIPAA Compliant</h4>
+                    <p class="text-gray-600">Full data security and compliance with PHI regulations for peace of mind.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div
+                    class="bg-blue-50/50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group scroll-animate delay-200">
+                    <div
+                        class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-600/30">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-dark">Expert Team</h4>
+                    <p class="text-gray-600">Experienced billing specialists dedicated to your practice's financial
+                        health.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div
+                    class="bg-blue-50/50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group scroll-animate">
+                    <div
+                        class="w-14 h-14 bg-purple-600 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-600/30">
+                        <i data-lucide="bar-chart" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-dark">Detailed Reporting</h4>
+                    <p class="text-gray-600">Comprehensive analytics and reports to track your revenue cycle
+                        performance.</p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div
+                    class="bg-blue-50/50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group scroll-animate delay-100">
+                    <div
+                        class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-teal-500/30">
+                        <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-dark">Dedicated Support</h4>
+                    <p class="text-gray-600">Personal account managers committed to your success and available when you
+                        need them.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-neutral relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-2">Our Core Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-dark">End-to-End RCM Solutions</h3>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">From coding to collections, we handle the entire revenue
+                    cycle so you can focus on patients.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group scroll-animate">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-blue-100 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Medical Coding</h4>
+                    <p class="text-gray-600 mb-4">Accurate CPT, ICD-10, and HCPCS coding to prevent denials and audit
+                        risks.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Certified Coders</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Regular Audits</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group scroll-animate delay-100">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-blue-100 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="send" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Claims Submission</h4>
+                    <p class="text-gray-600 mb-4">Clean claim submission for both electronic and paper claims with
+                        timely follow-ups.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> 99%
+                            Clean Claim Rate</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Electronic Processing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group scroll-animate delay-200">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-blue-100 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="alert-circle" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Denial Management</h4>
+                    <p class="text-gray-600 mb-4">Root cause analysis and aggressive appeal strategies to recover lost
+                        revenue.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Rapid Appeals</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Prevention Strategy</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group scroll-animate">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-blue-100 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="dollar-sign" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">A/R Management</h4>
+                    <p class="text-gray-600 mb-4">Proactive aging analysis and payer follow-ups to shorten reimbursement
+                        cycles.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Reduce Days in A/R</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Aging Analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group scroll-animate delay-100">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-blue-100 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="badge-check" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Provider Credentialing</h4>
+                    <p class="text-gray-600 mb-4">New provider enrollment and re-credentialing to ensure you can bill
+                        participating payers.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Enrollment Handling</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Status Tracking</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group scroll-animate delay-200">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-blue-100 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Reporting & Analytics</h4>
+                    <p class="text-gray-600 mb-4">Detailed financial reports and KPIs to give you full visibility into
+                        your practice's health.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i>
+                            Monthly Reports</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> KPI
+                            Dashboards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Who We Serve</h2>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 scroll-animate delay-100">
+                <span
+                    class="px-6 py-3 bg-gray-50 rounded-full border border-gray-100 text-gray-700 font-medium hover:bg-primary hover:text-white transition-colors cursor-default">Hospitals</span>
+                <span
+                    class="px-6 py-3 bg-gray-50 rounded-full border border-gray-100 text-gray-700 font-medium hover:bg-primary hover:text-white transition-colors cursor-default">Private
+                    Practices</span>
+                <span
+                    class="px-6 py-3 bg-gray-50 rounded-full border border-gray-100 text-gray-700 font-medium hover:bg-primary hover:text-white transition-colors cursor-default">Specialists</span>
+                <span
+                    class="px-6 py-3 bg-gray-50 rounded-full border border-gray-100 text-gray-700 font-medium hover:bg-primary hover:text-white transition-colors cursor-default">Laboratories</span>
+                <span
+                    class="px-6 py-3 bg-gray-50 rounded-full border border-gray-100 text-gray-700 font-medium hover:bg-primary hover:text-white transition-colors cursor-default">Mental
+                    Health Professionals</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-24 bg-primary text-white relative overflow-hidden">
+        <!-- Decorative blobs -->
+        <div class="absolute top-0 left-0 -ml-20 -mt-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 -mr-20 -mb-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-animate">Let’s Optimize Your Revenue Cycle</h2>
+            <p class="text-blue-100 text-lg mb-10 scroll-animate delay-100">Ready to decrease denials and increase
+                collections? Get a free assessment today.</p>
+
+            <form class="bg-white p-8 rounded-2xl shadow-2xl text-left space-y-4 scroll-animate delay-200">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text"
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                            placeholder="Dr. John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Practice Name</label>
+                        <input type="text"
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                            placeholder="City Medical">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email"
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                            placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                        <input type="tel"
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                            placeholder="(555) 123-4567">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                    <textarea
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all h-32"
+                        placeholder="Tell us about your practice needs..."></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    Send Request
+                </button>
+            </form>
+
+            <div class="mt-8 flex justify-center gap-8 text-blue-100 text-sm">
+                <a href="mailto:info@medtimercm.com" class="hover:text-white flex items-center gap-2"><i
+                        data-lucide="mail" class="w-4 h-4"></i> info@medtimercm.com</a>
+                <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Remote /
+                    Nationwide</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
+                        <i data-lucide="activity" class="w-6 h-6 text-primary"></i>
+                        Medtime RCM
+                    </a>
+                    <p class="mb-4 max-w-sm">Professional revenue cycle management solutions designed to streamline your
+                        practice's financial health.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="why-choose-us.html" class="hover:text-primary transition-colors">Why Choose Us</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="hover:text-primary transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center bg-dark">
+                <p>&copy; 2026 Medtime RCM. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <!-- Social icons could go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
