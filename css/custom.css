@@ -1,129 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;500;700&display=swap');
 
-/* Base Styles */
+/* Base Design Tokens */
 :root {
-  --color-dark: #0F172A;
-  --color-primary: #3B82F6;
+  --color-primary: #0D9488;
   --color-secondary: #0EA5E9;
-  --color-accent: #10B981;
+  --color-accent: #F97316;
+  --color-slate-900: #0F172A;
+  --color-slate-500: #64748B;
+  --color-slate-100: #F1F5F9;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFFFF;
 }
 
-/* Aurora Gradient Hero */
-.aurora-bg {
+/* Enterprise Mesh Gradient Background */
+.enterprise-mesh {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
-    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
-    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+  height: 100%;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(13, 148, 136, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(14, 165, 233, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(249, 115, 22, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(13, 148, 136, 0.05) 0%, transparent 50%);
   z-index: -1;
+}
+
+/* Glassmorphism Refined */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Bento Grid Hover Effects (Modified to use CSS variables from main.js) */
+.bento-card {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
   overflow: hidden;
 }
 
-.aurora-blur {
+.bento-card::before {
+  content: '';
   position: absolute;
-  filter: blur(80px);
-  opacity: 0.6;
-  animation: drift 20s infinite alternate;
+  inset: 0;
+  background: radial-gradient(400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(13, 148, 136, 0.08), transparent 80%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.aurora-1 {
-  top: -10%;
-  left: -10%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(15, 23, 42, 0) 70%);
-}
-
-.aurora-2 {
-  bottom: -10%;
-  right: -10%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
-  animation-delay: -5s;
-}
-
-@keyframes drift {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  100% {
-    transform: translate(50px, 30px) scale(1.1);
-  }
-}
-
-
-/* Glassmorphism */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.glass-card-dark {
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.glass-nav {
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-
-/* Text Gradients */
-.text-gradient-primary {
-  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-hero {
-  background: linear-gradient(to right, #ffffff, #94a3b8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-/* Bento Grid Hover Effects */
-.bento-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.bento-card:hover::before {
+  opacity: 1;
 }
 
 .bento-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.15);
-  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.06);
+  border-color: rgba(13, 148, 136, 0.2);
 }
 
-
-/* Sticky Scroll Section */
-.sticky-scroll-container {
-  height: 300vh;
-  /* Adjust based on content */
-  position: relative;
-}
-
-.sticky-sidebar {
-  position: sticky;
-  top: 15vh;
-  height: fit-content;
-}
-
-
-/* Marquee Animation */
+/* Marquee Animation Optimized */
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
@@ -132,7 +76,7 @@ body {
 
 .marquee-content {
   display: inline-block;
-  animation: marquee 40s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 @keyframes marquee {
@@ -145,23 +89,33 @@ body {
   }
 }
 
-
-/* Floating Animations */
-.float-1 {
-  animation: float-y 6s ease-in-out infinite;
+/* Interactive Elements */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
 }
 
-.float-2 {
-  animation: float-y 7s ease-in-out infinite;
-  animation-delay: 1s;
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.float-3 {
-  animation: float-y 5s ease-in-out infinite;
-  animation-delay: 2s;
+.scroll-reveal.delay-100 {
+  transition-delay: 0.1s;
 }
 
-@keyframes float-y {
+.scroll-reveal.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.scroll-reveal.delay-300 {
+  transition-delay: 0.3s;
+}
+
+/* Floating Animations for Mockups */
+@keyframes float {
 
   0%,
   100% {
@@ -169,43 +123,30 @@ body {
   }
 
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-20px);
   }
 }
 
-
-/* Glow Button */
-.btn-glow {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-.btn-glow::before {
+/* Modern Link Underline */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-  z-index: -1;
-}
-
-.btn-glow:hover::before {
-  left: 100%;
-}
-
-
-/* Scroll Reveal Classes (keep existing logic but refine) */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-}
-
-.scroll-reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
 }

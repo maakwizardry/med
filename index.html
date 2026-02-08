@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-darker">
+<html lang="en" class="scroll-smooth bg-white">
 
 <head>
     <meta charset="UTF-8">
@@ -31,131 +31,132 @@
     </script>
 </head>
 
-<body class="font-body text-slate-100 antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<body class="font-body text-slate-900 antialiased overflow-x-hidden selection:bg-primary selection:text-white">
 
     <!-- Background Elements -->
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <div
-            class="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-blob">
+            class="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-blob">
         </div>
         <div
-            class="absolute top-[40%] right-[-10%] w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] animate-blob animation-delay-2000">
+            class="absolute top-[40%] right-[-10%] w-[400px] h-[400px] bg-accent/8 rounded-full blur-[100px] animate-blob animation-delay-2000">
         </div>
         <div
-            class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] animate-blob animation-delay-4000">
+            class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-secondary/8 rounded-full blur-[120px] animate-blob animation-delay-4000">
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 w-full">
+    <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 w-full py-6 pointer-events-none">
         <div
-            class="glass-nav rounded-2xl px-6 py-4 flex items-center justify-between w-full max-w-6xl shadow-glass border border-white/5 relative overflow-hidden backdrop-blur-xl">
-            <!-- Shine effect -->
-            <div
-                class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 translate-x-[-150%] animate-shine">
-            </div>
+            class="bg-white/70 rounded-full px-8 py-3 flex items-center justify-between w-full max-w-5xl shadow-[0_8px_32px_rgba(0,0,0,0.04)] border border-white/40 relative overflow-hidden backdrop-blur-2xl pointer-events-auto group/nav transition-all duration-500 hover:shadow-[0_12px_48px_rgba(0,0,0,0.06)]">
 
-            <div class="flex items-center gap-2 z-10">
+            <div class="flex items-center gap-3 z-10">
                 <div
-                    class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white shadow-lg shadow-primary/30">
+                    class="w-9 h-9 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20 transition-transform group-hover/nav:scale-105">
                     <i data-lucide="activity" class="w-5 h-5"></i>
                 </div>
-                <span class="text-xl font-display font-bold tracking-tight text-white">Medtime<span
-                        class="text-secondary">RCM</span></span>
+                <span class="text-xl font-display font-bold tracking-tight text-slate-900">Medtime<span
+                        class="text-primary italic">RCM</span></span>
             </div>
 
             <!-- Desktop Links -->
-            <div class="hidden md:flex items-center gap-8">
+            <div class="hidden md:flex items-center gap-10">
                 <a href="about.html"
-                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
+                    class="text-[13px] font-semibold text-slate-500 hover:text-primary transition-all duration-300 tracking-wide uppercase">About</a>
                 <a href="services.html"
-                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Services</a>
+                    class="text-[13px] font-semibold text-slate-500 hover:text-primary transition-all duration-300 tracking-wide uppercase">Services</a>
                 <a href="why-choose-us.html"
-                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Why Us</a>
+                    class="text-[13px] font-semibold text-slate-500 hover:text-primary transition-all duration-300 tracking-wide uppercase">Why
+                    Us</a>
             </div>
-
-            <!-- Mobile Menu Toggle -->
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-white hover:text-primary focus:outline-none p-1">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-
 
             <!-- CTA -->
             <div class="hidden md:block z-10">
                 <a href="contact.html"
-                    class="bg-primary hover:bg-primary/90 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-glow hover:shadow-lg hover:-translate-y-0.5 border border-white/10">
-                    Get Audit
+                    class="group relative bg-slate-900 hover:bg-slate-800 text-white text-[13px] font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 overflow-hidden">
+                    <span class="relative z-10">Get Audit</span>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
                 </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-slate-900 p-1">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
+        <!-- Mobile Menu Dropdown (Updated for new style) -->
         <div id="mobile-menu"
-            class="hidden absolute top-20 left-4 right-4 bg-slate-900 border border-slate-700 rounded-2xl p-4 flex flex-col space-y-4 shadow-2xl z-40">
-            <a href="about.html" class="block text-slate-300 hover:text-white py-2 border-b border-slate-800">About</a>
+            class="hidden absolute top-24 left-4 right-4 bg-white/95 backdrop-blur-xl border border-slate-200 rounded-3xl p-6 flex flex-col space-y-4 shadow-2xl z-40">
+            <a href="about.html" class="text-lg font-semibold text-slate-900 py-3 border-b border-slate-100">About</a>
             <a href="services.html"
-                class="block text-slate-300 hover:text-white py-2 border-b border-slate-800">Services</a>
-            <a href="why-choose-us.html"
-                class="block text-slate-300 hover:text-white py-2 border-b border-slate-800">Why Us</a>
-            <a href="contact.html" class="block bg-primary text-center text-white font-bold py-3 rounded-xl mt-2">Get
+                class="text-lg font-semibold text-slate-900 py-3 border-b border-slate-100">Services</a>
+            <a href="why-choose-us.html" class="text-lg font-semibold text-slate-900 py-3 border-b border-slate-100">Why
+                Us</a>
+            <a href="contact.html" class="bg-primary text-center text-white font-bold py-4 rounded-2xl mt-4">Get
                 Audit</a>
         </div>
     </nav>
 
 
     <!-- Hero Section -->
-    <header class="relative pt-40 pb-32 overflow-hidden mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <header class="relative pt-48 pb-40 overflow-hidden mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- New Mesh Background just for Hero -->
+        <div class="enterprise-mesh opacity-40"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <!-- Text Content -->
             <div class="z-10 scroll-reveal">
                 <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 mb-6 backdrop-blur-sm">
-                    <span class="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-                    <span class="text-xs font-medium text-slate-300 tracking-wide uppercase">AI-Powered Revenue
-                        Cycle</span>
+                    class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/5 border border-slate-200 mb-8 backdrop-blur-md">
+                    <span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                    <span class="text-[11px] font-bold text-slate-600 tracking-[0.15em] uppercase">Intelligence-Driven
+                        Billing</span>
                 </div>
 
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Maximize</span>
-                    <br />
-                    Your Revenue.
+                <h1
+                    class="text-6xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[1.05] mb-8 tracking-[-0.03em] text-slate-900">
+                    Smarter <br />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Growth.</span>
                 </h1>
 
-                <p class="text-lg text-slate-400 mb-8 max-w-lg leading-relaxed">
-                    Stop leaving money on the table. We combine expert coding with AI denial prevention to increase
-                    collections by <span class="text-white font-semibold">15% in 90 days</span>.
+                <p class="text-xl text-slate-500 mb-10 max-w-lg leading-[1.6] font-medium">
+                    The enterprise revenue cycle engine for progressive healthcare. We eliminate denials and capture
+                    every dollar you've earned.
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex flex-col sm:flex-row gap-5">
                     <a href="contact.html"
-                        class="group relative px-8 py-4 bg-primary rounded-xl font-bold text-white shadow-glow hover:shadow-lg hover:shadow-primary/40 transition-all overflow-hidden flex items-center justify-center gap-2">
-                        <div
-                            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]">
-                        </div>
-                        <span>Start Free Assessment</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        class="group relative px-8 py-4.5 bg-primary rounded-full font-bold text-white shadow-[0_20px_40px_-10px_rgba(13,148,136,0.3)] hover:shadow-[0_25px_50px_-12px_rgba(13,148,136,0.4)] transition-all duration-500 hover:-translate-y-1 flex items-center justify-center gap-3 overflow-hidden">
+                        <span>Start Assessment</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                     </a>
 
                     <a href="services.html"
-                        class="px-8 py-4 rounded-xl font-semibold text-slate-300 border border-slate-700 hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center">
-                        View Solutions
+                        class="group px-8 py-4.5 rounded-full font-bold text-slate-900 border-2 border-slate-200 hover:border-slate-300 transition-all duration-300 flex items-center justify-center gap-3 hover:bg-slate-50">
+                        <span>The Platform</span>
+                        <i data-lucide="external-link"
+                            class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                     </a>
                 </div>
 
-                <div
-                    class="mt-12 flex items-center gap-6 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
-                    <div class="flex flex-col border-l border-slate-700 pl-4">
-                        <span class="text-2xl font-bold text-white">99%</span>
+                <div class="mt-12 flex items-center gap-6 opacity-80 hover:opacity-100 transition-all duration-500">
+                    <div class="flex flex-col border-l-2 border-primary pl-4">
+                        <span class="text-2xl font-bold text-slate-900">99%</span>
                         <span class="text-xs text-slate-500 uppercase tracking-wider">Clean Claims</span>
                     </div>
-                    <div class="flex flex-col border-l border-slate-700 pl-4">
-                        <span class="text-2xl font-bold text-white">24h</span>
+                    <div class="flex flex-col border-l-2 border-primary pl-4">
+                        <span class="text-2xl font-bold text-slate-900">24h</span>
                         <span class="text-xs text-slate-500 uppercase tracking-wider">Turnaround</span>
                     </div>
-                    <div class="flex flex-col border-l border-slate-700 pl-4">
-                        <span class="text-2xl font-bold text-white">$50M+</span>
+                    <div class="flex flex-col border-l-2 border-primary pl-4">
+                        <span class="text-2xl font-bold text-slate-900">$50M+</span>
                         <span class="text-xs text-slate-500 uppercase tracking-wider">Managed</span>
                     </div>
                 </div>
@@ -166,44 +167,45 @@
                 class="relative z-0 lg:h-[600px] flex items-center justify-center perspective-1000 scroll-reveal delay-100">
                 <!-- Abstract Dashboard Card -->
                 <div
-                    class="relative w-full max-w-md bg-slate-900 border border-slate-700 rounded-3xl p-6 shadow-2xl transform rotate-y-[-10deg] rotate-x-[5deg] hover:rotate-0 transition-all duration-700 ease-out group">
+                    class="relative w-full max-w-md bg-white border border-slate-200 rounded-3xl p-6 shadow-2xl transform rotate-y-[-10deg] rotate-x-[5deg] hover:rotate-0 transition-all duration-700 ease-out group">
                     <!-- Glass Shine -->
                     <div
-                        class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent rounded-3xl pointer-events-none">
+                        class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent rounded-3xl pointer-events-none">
                     </div>
 
                     <!-- Header -->
                     <div class="flex justify-between items-center mb-6">
                         <div class="flex gap-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-400"></div>
                         </div>
-                        <div class="text-xs font-mono text-slate-500">financial_health_kpi.json</div>
+                        <div class="text-xs font-mono text-slate-400">revenue_dashboard.json</div>
                     </div>
 
                     <!-- Chart Placeholder -->
                     <div
-                        class="h-32 w-full bg-gradient-to-t from-primary/20 to-transparent rounded-lg relative overflow-hidden mb-6 flex items-end justify-between px-2 pb-0 pt-8 gap-2">
-                        <div class="w-full bg-primary/40 h-[40%] rounded-t-sm"></div>
-                        <div class="w-full bg-primary/60 h-[60%] rounded-t-sm"></div>
-                        <div class="w-full bg-primary/50 h-[50%] rounded-t-sm"></div>
-                        <div class="w-full bg-primary/80 h-[80%] rounded-t-sm animate-pulse"></div>
-                        <div class="w-full bg-accent h-[95%] rounded-t-sm shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
+                        class="h-32 w-full bg-gradient-to-t from-primary/10 to-transparent rounded-lg relative overflow-hidden mb-6 flex items-end justify-between px-2 pb-0 pt-8 gap-2">
+                        <div class="w-full bg-primary/30 h-[40%] rounded-t-sm"></div>
+                        <div class="w-full bg-primary/50 h-[60%] rounded-t-sm"></div>
+                        <div class="w-full bg-primary/40 h-[50%] rounded-t-sm"></div>
+                        <div class="w-full bg-primary/70 h-[80%] rounded-t-sm animate-pulse"></div>
+                        <div class="w-full bg-primary h-[95%] rounded-t-sm shadow-[0_0_15px_rgba(13,148,136,0.3)]">
+                        </div>
                     </div>
 
                     <!-- Metrics Row -->
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-                            <div class="text-xs text-slate-400 mb-1">Collection Rate</div>
-                            <div class="text-xl font-bold text-white flex items-center gap-2">
-                                98.2% <i data-lucide="trending-up" class="w-4 h-4 text-accent"></i>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <div class="text-xs text-slate-500 mb-1">Collection Rate</div>
+                            <div class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                                98.2% <i data-lucide="trending-up" class="w-4 h-4 text-primary"></i>
                             </div>
                         </div>
-                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-                            <div class="text-xs text-slate-400 mb-1">Days in A/R</div>
-                            <div class="text-xl font-bold text-white flex items-center gap-2">
-                                14 Days <span class="text-xs font-normal text-slate-500 line-through">45</span>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <div class="text-xs text-slate-500 mb-1">Days in A/R</div>
+                            <div class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                                14 Days <span class="text-xs font-normal text-slate-400 line-through">45</span>
                             </div>
                         </div>
                     </div>
@@ -211,25 +213,25 @@
 
                 <!-- Floating Elements -->
                 <div
-                    class="absolute -right-12 top-20 bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-600 animate-float">
+                    class="absolute -right-12 top-20 bg-white p-4 rounded-2xl shadow-xl border border-slate-200 animate-float">
                     <div class="flex items-center gap-3">
-                        <div class="bg-accent/20 p-2 rounded-lg text-accent"><i data-lucide="check-circle"
+                        <div class="bg-primary/10 p-2 rounded-lg text-primary"><i data-lucide="check-circle"
                                 class="w-5 h-5"></i></div>
                         <div>
-                            <div class="text-xs text-slate-400">Claim Status</div>
-                            <div class="text-sm font-bold text-white">Paid in Full</div>
+                            <div class="text-xs text-slate-500">Claim Status</div>
+                            <div class="text-sm font-bold text-slate-900">Paid in Full</div>
                         </div>
                     </div>
                 </div>
 
                 <div
-                    class="absolute -left-8 bottom-32 bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-600 animate-float animation-delay-2000">
+                    class="absolute -left-8 bottom-32 bg-white p-4 rounded-2xl shadow-xl border border-slate-200 animate-float animation-delay-2000">
                     <div class="flex items-center gap-3">
-                        <div class="bg-red-500/20 p-2 rounded-lg text-red-500"><i data-lucide="shield-alert"
+                        <div class="bg-accent/10 p-2 rounded-lg text-accent"><i data-lucide="shield-alert"
                                 class="w-5 h-5"></i></div>
                         <div>
-                            <div class="text-xs text-slate-400">Denial Prevented</div>
-                            <div class="text-sm font-bold text-white">Code Updated</div>
+                            <div class="text-xs text-slate-500">Denial Prevented</div>
+                            <div class="text-sm font-bold text-slate-900">Code Updated</div>
                         </div>
                     </div>
                 </div>
@@ -238,93 +240,138 @@
     </header>
 
 
-    <!-- Infinite Marquee (Social Proof) -->
-    <div class="py-10 border-y border-white/5 bg-slate-900/30 overflow-hidden">
-        <p class="text-center text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">Integrates with major
-            EHR Systems</p>
-        <div class="relative w-full flex overflow-x-hidden">
-            <div
-                class="animate-marquee whitespace-nowrap flex gap-16 items-center px-4 md:text-2xl font-bold text-slate-700 select-none">
-                <span>EPIC</span> <span>CERNER</span> <span>ALLSCRIPTS</span> <span>ATHENAHEALTH</span>
-                <span>NEXTGEN</span>
-                <span>ECLINICALWORKS</span> <span>GREENWAY</span> <span>PRACTICE FUSION</span> <span>KAREO</span>
-                <!-- Duplicate for seamless loop -->
-                <span>EPIC</span> <span>CERNER</span> <span>ALLSCRIPTS</span> <span>ATHENAHEALTH</span>
-                <span>NEXTGEN</span>
-                <span>ECLINICALWORKS</span> <span>GREENWAY</span> <span>PRACTICE FUSION</span> <span>KAREO</span>
+    <!-- Stats/Logos Marquee (Updated for Enterprise look) -->
+    <section class="py-24 bg-white border-y border-slate-100 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 mb-12 text-center scroll-reveal">
+            <p class="text-[11px] font-bold text-slate-400 tracking-[0.25em] uppercase mb-4">Integrates with major EHR
+                Systems</p>
+            <div class="h-px w-12 bg-primary/30 mx-auto"></div>
+        </div>
+
+        <div class="marquee-container relative">
+            <!-- Subtle fades on sides -->
+            <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+            <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+            <div class="marquee-content flex items-center gap-24 py-4">
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">EPIC</span>
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">CERNER</span>
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">ALLSCRIPTS</span>
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">ATHENAHEALTH</span>
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">NEXTGEN</span>
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">GREENWAY</span>
+
+                <!-- Duplicate for loop -->
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">EPIC</span>
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">CERNER</span>
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">ALLSCRIPTS</span>
+                <span
+                    class="text-3xl font-display font-black text-slate-200 hover:text-primary transition-all duration-500 cursor-default tracking-tighter">ATHENAHEALTH</span>
             </div>
         </div>
-    </div>
+    </section>
 
 
     <!-- Bento Grid Section (Why Us) -->
-    <section class="py-32 relative">
+    <section class="py-32 relative bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20 scroll-reveal">
-                <h2 class="text-3xl md:text-5xl font-display font-bold mb-4 text-white">Built for <span
-                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Growth</span>
+            <div class="text-center mb-24 scroll-reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-6 font-display font-bold text-[11px] text-primary tracking-widest uppercase">
+                    The Clinical Edge</div>
+                <h2 class="text-4xl md:text-6xl font-display font-extrabold mb-8 text-slate-900 tracking-tight">Built
+                    for <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary animate-gradient bg-[length:200%_auto]">Precision.</span>
                 </h2>
-                <p class="text-slate-400 max-w-2xl mx-auto text-lg">We replace manual errors with automated precision,
-                    giving you a revenue cycle that scales with your practice.</p>
+                <p class="text-slate-500 max-w-2xl mx-auto text-xl leading-relaxed">We replace manual errors with
+                    automated intelligence,
+                    giving you a revenue cycle that adapts and scales.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[340px]">
 
                 <!-- Card 1: Revenue (Large) -->
                 <div
-                    class="md:col-span-2 row-span-1 bg-slate-900 border border-slate-800 rounded-3xl p-8 relative overflow-hidden group hover:border-primary/30 transition-all duration-500 scroll-reveal">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="relative z-10 h-full flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center gap-2 text-primary mb-2">
-                                <i data-lucide="trending-up" class="w-5 h-5"></i> <span
-                                    class="font-bold tracking-wider text-xs uppercase">Revenue Lift</span>
-                            </div>
-                            <h3 class="text-3xl font-bold text-white mb-2">10-15% Increase</h3>
-                            <p class="text-slate-400 max-w-md">Our clients see a significant boost in net collections
-                                within the first 6 months of partnership.</p>
+                    class="bento-card md:col-span-2 row-span-1 bg-white border border-slate-200/60 rounded-[2rem] p-10 flex flex-col justify-between scroll-reveal shadow-[0_2px_15px_-3px_rgba(0,0,0,0.03)]">
+
+                    <div class="relative z-10 flex flex-col">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 mb-6">
+                            <i data-lucide="trending-up" class="w-4 h-4 text-primary"></i>
+                            <span class="font-bold tracking-wider text-[10px] uppercase text-slate-600">Growth
+                                Optimization</span>
                         </div>
-                        <!-- Decorative Graph Line -->
-                        <div class="w-full h-24 flex items-end gap-1 opacity-50">
-                            <div class="w-[10%] h-[30%] bg-slate-700 rounded-t"></div>
-                            <div class="w-[10%] h-[45%] bg-slate-700 rounded-t"></div>
-                            <div class="w-[10%] h-[40%] bg-slate-700 rounded-t"></div>
-                            <div class="w-[10%] h-[60%] bg-slate-600 rounded-t"></div>
-                            <div class="w-[10%] h-[55%] bg-slate-600 rounded-t"></div>
-                            <div class="w-[10%] h-[75%] bg-slate-500 rounded-t"></div>
-                            <div class="w-[10%] h-[85%] bg-primary/60 rounded-t"></div>
-                            <div class="w-[10%] h-[100%] bg-primary rounded-t shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                            </div>
+                        <h3 class="text-4xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">10-15% Revenue
+                            Lift</h3>
+                        <p class="text-slate-500 max-w-sm text-lg leading-relaxed">Our clinical intelligence engine
+                            identifies missing charges and underpayments across your entire practice history.</p>
+                    </div>
+
+                    <!-- Enhanced Graph Visual -->
+                    <div
+                        class="relative z-10 w-full h-24 flex items-end gap-3 mt-4 overflow-hidden rounded-xl bg-slate-50/50 p-4 border border-slate-100">
+                        <div class="w-full h-px bg-slate-200 absolute bottom-4 left-0"></div>
+                        <div class="w-[10%] h-[40%] bg-slate-200 rounded-lg transition-all"></div>
+                        <div class="w-[10%] h-[55%] bg-slate-200 rounded-lg transition-all"></div>
+                        <div class="w-[10%] h-[45%] bg-slate-200 rounded-lg transition-all"></div>
+                        <div class="w-[10%] h-[70%] bg-slate-300 rounded-lg transition-all"></div>
+                        <div class="w-[10%] h-[60%] bg-primary/30 rounded-lg transition-all"></div>
+                        <div class="w-[10%] h-[85%] bg-primary/60 rounded-lg transition-all"></div>
+                        <div class="w-[10%] h-[100%] bg-primary rounded-lg shadow-lg shadow-primary/20 relative">
+                            <div
+                                class="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] font-bold px-2 py-1 rounded-md">
+                                +15%</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 2: Security (Tall) -->
                 <div
-                    class="md:col-span-1 md:row-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-8 relative overflow-hidden group hover:border-accent/30 transition-all duration-500 scroll-reveal delay-100">
+                    class="bento-card md:col-span-1 md:row-span-2 bg-slate-900 border border-slate-800 rounded-[2rem] p-10 flex flex-col justify-between scroll-reveal delay-100 overflow-hidden group">
+                    <!-- Subtle glow bg -->
                     <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-accent/10 transition-all">
+                        class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none group-hover:bg-primary/20 transition-all duration-700">
                     </div>
-                    <div class="relative z-10 h-full flex flex-col">
-                        <div
-                            class="bg-slate-800 w-12 h-12 rounded-xl flex items-center justify-center text-accent mb-6 border border-slate-700">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Bank-Grade Security</h3>
-                        <p class="text-slate-400 mb-8">Fully HIPAA compliant infrastructure with end-to-end encryption
-                            for all PHI data.</p>
 
-                        <ul class="space-y-4 text-slate-300 mt-auto">
-                            <li class="flex items-center gap-3">
-                                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div> SOC 2 Type II
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-10 border border-primary/20">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-6 tracking-tight">Enterprise Infrastructure</h3>
+                        <p class="text-slate-400 mb-8 leading-relaxed text-lg">Fully HIPAA compliant, SOC 2 Type II
+                            certified infrastructure with end-to-end PHI encryption.</p>
+
+                        <ul class="space-y-6 text-slate-300 mt-10 text-sm">
+                            <li class="flex items-center gap-4">
+                                <div
+                                    class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center text-primary">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span>SOC 2 Type II Certified</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div> 256-bit AES Encryption
+                            <li class="flex items-center gap-4">
+                                <div
+                                    class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center text-primary">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span>AES-256 Data At Rest</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div> Role-Based Access
+                            <li class="flex items-center gap-4">
+                                <div
+                                    class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center text-primary">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span>RBAC Access Protocols</span>
                             </li>
                         </ul>
                     </div>
@@ -332,26 +379,30 @@
 
                 <!-- Card 3: Speed (Small) -->
                 <div
-                    class="md:col-span-1 bg-slate-900 border border-slate-800 rounded-3xl p-8 hover:border-blue-400/30 transition-all duration-500 group scroll-reveal delay-200">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="bg-blue-500/10 p-2 rounded-lg text-blue-400"><i data-lucide="clock"
-                                class="w-6 h-6"></i></div>
-                        <span class="text-xs font-bold bg-blue-500/20 text-blue-300 px-2 py-1 rounded">FAST</span>
+                    class="bento-card md:col-span-1 bg-white border border-slate-200/60 rounded-[2rem] p-10 flex flex-col justify-between scroll-reveal delay-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.03)] group">
+                    <div>
+                        <div
+                            class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-8 border border-secondary/20">
+                            <i data-lucide="zap" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 tracking-tight">Real-time Cycle</h3>
+                        <p class="text-slate-500 leading-relaxed">98% of qualified claims are scrubbed and submitted
+                            within 24 hours.</p>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">24h Turnaround</h3>
-                    <p class="text-slate-400 text-sm">Claims submitted mainly within 24 hours of receipt.</p>
                 </div>
 
                 <!-- Card 4: Support (Small) -->
                 <div
-                    class="md:col-span-1 bg-slate-900 border border-slate-800 rounded-3xl p-8 hover:border-purple-400/30 transition-all duration-500 group scroll-reveal delay-300">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="bg-purple-500/10 p-2 rounded-lg text-purple-400"><i data-lucide="users"
-                                class="w-6 h-6"></i></div>
-                        <span class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded">HUMAN</span>
+                    class="bento-card md:col-span-1 bg-white border border-slate-200/60 rounded-[2rem] p-10 flex flex-col justify-between scroll-reveal delay-300 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.03)] group">
+                    <div>
+                        <div
+                            class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-8 border border-accent/20">
+                            <i data-lucide="headset" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 tracking-tight">Bespoke Support</h3>
+                        <p class="text-slate-500 leading-relaxed">Dedicated account strategists available via direct
+                            line, no ticket delays.</p>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">Dedicated Team</h3>
-                    <p class="text-slate-400 text-sm">Direct access to your account manager, no tickets.</p>
                 </div>
 
             </div>
@@ -359,113 +410,148 @@
     </section>
 
 
-    <!-- Feature Tabs / Sticky Scroll Concept (Simplified) -->
-    <section class="py-24 bg-surface relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <!-- Feature Section (The Platform) -->
+    <section class="py-32 bg-slate-50 relative overflow-hidden">
+        <!-- Minimal background accents -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent">
+        </div>
 
-                <!-- Left: Content that stays sticky? Or just simple list -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+
+                <!-- Left: Content -->
                 <div class="space-y-12">
                     <div class="scroll-reveal">
-                        <span class="text-primary font-bold tracking-widest uppercase text-xs">Our Expertise</span>
-                        <h2 class="text-4xl font-bold text-white mt-2 mb-6">Comprehensive RCM Suite</h2>
-                        <p class="text-slate-400 text-lg">We handle every step of the financial lifecycle so you can
-                            focus on clinical excellence.</p>
-                    </div>
-
-                    <!-- Feature 1 -->
-                    <div class="flex gap-6 group scroll-reveal delay-100">
-                        <div class="flex-shrink-0 mt-1">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center border border-slate-700 group-hover:border-primary group-hover:text-primary transition-colors">
-                                <i data-lucide="file-code" class="w-6 h-6"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                                Precision Coding</h3>
-                            <p class="text-slate-400 leading-relaxed">Certified CPC coders ensuring maximum specificity
-                                and compliance to reduce front-end rejections.</p>
-                        </div>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="flex gap-6 group scroll-reveal delay-200">
-                        <div class="flex-shrink-0 mt-1">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center border border-slate-700 group-hover:border-primary group-hover:text-primary transition-colors">
-                                <i data-lucide="alert-triangle" class="w-6 h-6"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                                Denial Prevention</h3>
-                            <p class="text-slate-400 leading-relaxed">Prolactive scrubbing of claims. If a denial
-                                happens, our team launches immediate, aggressive appeals.</p>
-                        </div>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="flex gap-6 group scroll-reveal delay-300">
-                        <div class="flex-shrink-0 mt-1">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center border border-slate-700 group-hover:border-primary group-hover:text-primary transition-colors">
-                                <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                                Analytics & Reporting</h3>
-                            <p class="text-slate-400 leading-relaxed">Crystal clear financial dashboards. Know exactly
-                                where your money is at any given moment.</p>
-                        </div>
-                    </div>
-
-                    <div class="pt-6">
-                        <a href="services.html"
-                            class="text-primary font-bold hover:text-white transition-colors flex items-center gap-2">Explore
-                            all services <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                    </div>
-                </div>
-
-                <!-- Right: Visual -->
-                <div
-                    class="relative lg:h-auto min-h-[400px] bg-slate-900 rounded-3xl border border-slate-800 p-2 scroll-reveal delay-200">
-                    <div class="h-full w-full bg-slate-950 rounded-2xl overflow-hidden relative">
-                        <!-- Code Snippet Effect -->
-                        <div class="p-6 font-mono text-xs text-slate-500 leading-loose">
-                            <span class="text-purple-400">class</span> <span class="text-yellow-200">RevenueCycle</span>
-                            {<br />
-                            &nbsp;&nbsp;<span class="text-purple-400">constructor</span>(client) {<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-300">this</span>.client = client;<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-300">this</span>.efficiency = <span
-                                class="text-accent">100%</span>;<br />
-                            &nbsp;&nbsp;}<br /><br />
-                            &nbsp;&nbsp;<span class="text-blue-400">optimize</span>() {<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-slate-400">// Automating claim
-                                submission...</span><br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">return</span> <span
-                                class="text-yellow-200">CashFlow</span>.maximize();<br />
-                            &nbsp;&nbsp;}<br />
-                            }
-                        </div>
-
-                        <!-- Abstract Graphic overlay -->
                         <div
-                            class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-slate-900 to-transparent">
-                        </div>
-                        <div
-                            class="absolute bottom-8 left-8 right-8 bg-slate-800/80 backdrop-blur-md rounded-xl p-4 border border-slate-700 flex items-center gap-4">
-                            <div class="bg-accent/20 p-3 rounded-full text-accent"><i data-lucide="check"
-                                    class="w-6 h-6"></i></div>
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 text-white mb-6 font-display font-bold text-[10px] tracking-widest uppercase shadow-lg shadow-slate-900/20">
+                            The Platform</div>
+                        <h2
+                            class="text-5xl md:text-6xl font-display font-extrabold text-slate-900 mb-8 tracking-tight leading-tight">
+                            Comprehensive <br />
+                            <span class="text-primary italic">Intelligence.</span>
+                        </h2>
+                        <p class="text-slate-500 text-xl leading-relaxed max-w-lg">A unified operating system for
+                            healthcare finance. We manage complexity so you can master care.</p>
+                    </div>
+
+                    <div class="space-y-10">
+                        <!-- Feature 1 -->
+                        <div class="flex gap-8 group scroll-reveal delay-100">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center border border-slate-200 shadow-sm group-hover:shadow-md group-hover:border-primary/30 transition-all duration-300 text-slate-400 group-hover:text-primary">
+                                    <i data-lucide="cpu" class="w-7 h-7"></i>
+                                </div>
+                            </div>
                             <div>
-                                <h4 class="text-white font-bold">Optimization Complete</h4>
-                                <p class="text-xs text-slate-400">System running at peak efficiency</p>
+                                <h3
+                                    class="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                                    Neural Coding Engine</h3>
+                                <p class="text-slate-500 leading-relaxed">AI-assisted CPC coding that learns from payer
+                                    responses to eliminate specificity errors before submission.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="flex gap-8 group scroll-reveal delay-200">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center border border-slate-200 shadow-sm group-hover:shadow-md group-hover:border-primary/30 transition-all duration-300 text-slate-400 group-hover:text-primary">
+                                    <i data-lucide="shield-check" class="w-7 h-7"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                                    Automated Denial Defense</h3>
+                                <p class="text-slate-500 leading-relaxed">Predictive scrubbing catchers 99% of potential
+                                    denials. Real-time appeals automation for the remaining 1%.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="flex gap-8 group scroll-reveal delay-300">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center border border-slate-200 shadow-sm group-hover:shadow-md group-hover:border-primary/30 transition-all duration-300 text-slate-400 group-hover:text-primary">
+                                    <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                                    Yield Analytics Dashboard</h3>
+                                <p class="text-slate-500 leading-relaxed">Real-time visibility into your net collection
+                                    ratio, days in A/R, and payer performance metrics.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Right: Visual (Enhanced High-End Mockup) -->
+                <div class="relative scroll-reveal delay-200 lg:translate-x-12">
+                    <div
+                        class="relative z-10 bg-white rounded-[2.5rem] border border-slate-200 p-3 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] overflow-hidden">
+                        <div
+                            class="bg-slate-50 rounded-[2rem] p-8 border border-slate-100 min-h-[500px] flex flex-col gap-6">
+                            <!-- Mockup Header -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+                                    <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+                                    <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+                                </div>
+                                <div
+                                    class="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">
+                                    Live Yield Tracking</div>
+                            </div>
+
+                            <!-- Mockup Content -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="h-32 bg-white rounded-2xl border border-slate-100 p-4 shadow-sm">
+                                    <div class="h-2 w-12 bg-slate-100 rounded-full mb-4"></div>
+                                    <div class="text-2xl font-black text-slate-900">$1.2M</div>
+                                    <div class="text-[10px] text-primary font-bold mt-2 flex items-center gap-1">
+                                        <i data-lucide="trending-up" class="w-3 h-3"></i> +12.5%
+                                    </div>
+                                </div>
+                                <div class="h-32 bg-white rounded-2xl border border-slate-100 p-4 shadow-sm">
+                                    <div class="h-2 w-12 bg-slate-100 rounded-full mb-4"></div>
+                                    <div class="text-2xl font-black text-slate-900">99.2%</div>
+                                    <div class="text-[10px] text-primary font-bold mt-2">Clean Claim Rate</div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex-1 bg-white rounded-2xl border border-slate-100 p-6 shadow-sm overflow-hidden relative">
+                                <div class="flex justify-between items-center mb-8">
+                                    <div class="h-4 w-32 bg-slate-100 rounded-full"></div>
+                                    <div class="h-4 w-12 bg-slate-50 rounded-full"></div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="h-2 w-full bg-slate-50 rounded-full"></div>
+                                    <div class="h-2 w-[80%] bg-slate-50 rounded-full"></div>
+                                    <div class="h-2 w-[60%] bg-slate-50 rounded-full"></div>
+                                    <div class="h-2 w-full bg-slate-50 rounded-full"></div>
+                                    <div class="h-2 w-[40%] bg-slate-50 rounded-full"></div>
+                                </div>
+                                <!-- Overlay Badge -->
+                                <div
+                                    class="absolute bottom-6 right-6 bg-slate-900 text-white p-4 rounded-2xl shadow-2xl flex items-center gap-4 animate-float">
+                                    <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center"><i
+                                            data-lucide="activity" class="w-5 h-5"></i></div>
+                                    <div>
+                                        <div class="text-[10px] font-bold text-slate-400 uppercase">Status</div>
+                                        <div class="text-sm font-bold">Audit Complete</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -473,82 +559,185 @@
 
     <!-- Large CTA -->
     <section class="py-32 relative overflow-hidden">
-        <!-- Glow effects -->
+        <!-- Creative background with multiple layers -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-white to-secondary/10"></div>
+
+        <!-- Animated decorative circles -->
+        <div class="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-blob"></div>
         <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] pointer-events-none">
+            class="absolute bottom-10 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-blob animation-delay-4000">
         </div>
 
-        <div class="max-w-5xl mx-auto px-4 relative z-10 text-center">
-            <h2 class="text-5xl md:text-7xl font-display font-bold text-white mb-8 tracking-tight">Ready to <br /><span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Scale Your
-                    Practice?</span></h2>
-            <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">Join the forward-thinking medical providers who
-                have modernized their revenue cycle with Medtime.</p>
+        <!-- Dot pattern overlay -->
+        <div class="absolute inset-0 opacity-[0.03]"
+            style="background-image: radial-gradient(circle at 2px 2px, rgb(13 148 136) 1.5px, transparent 0); background-size: 40px 40px;">
+        </div>
 
-            <a href="contact.html"
-                class="inline-flex items-center gap-3 bg-white text-dark font-bold text-lg px-10 py-5 rounded-full hover:scale-105 transition-transform shadow-[0_0_40px_rgba(255,255,255,0.3)]">
-                Get Your Free Audit
-                <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </a>
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <!-- Badge -->
+            <div class="flex justify-center mb-8">
+                <div
+                    class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border-2 border-primary/20 shadow-lg">
+                    <div class="flex -space-x-2">
+                        <div
+                            class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary/80 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                            M</div>
+                        <div
+                            class="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-secondary/80 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                            R</div>
+                        <div
+                            class="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-accent/80 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                            C</div>
+                    </div>
+                    <span class="text-sm font-bold text-slate-700">Trusted by 200+ Healthcare Providers</span>
+                </div>
+            </div>
 
-            <p class="mt-6 text-sm text-slate-500">No commitment required. 100% Confidential.</p>
+            <!-- Main heading with creative typography -->
+            <div class="text-center mb-8">
+                <h2 class="text-5xl md:text-7xl font-display font-bold text-slate-900 mb-4 tracking-tight leading-none">
+                    Transform Your
+                    <span
+                        class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-gradient bg-[length:200%_auto]">Revenue
+                        Cycle</span>
+                </h2>
+                <div class="flex items-center justify-center gap-4 mt-6">
+                    <div class="h-1 w-16 bg-gradient-to-r from-transparent to-primary rounded-full"></div>
+                    <div class="h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <div class="h-1 w-16 bg-gradient-to-l from-transparent to-primary rounded-full"></div>
+                </div>
+            </div>
+
+            <p class="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto text-center leading-relaxed">
+                Join forward-thinking medical practices achieving <span class="font-bold text-primary">15% revenue
+                    growth</span> with our AI-powered RCM platform.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <a href="contact.html"
+                    class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-primary to-primary/90 text-white font-bold text-lg px-10 py-5 rounded-full hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/20 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
+                    <span class="relative">Start Free Assessment</span>
+                    <i data-lucide="arrow-right"
+                        class="w-5 h-5 relative group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="services.html"
+                    class="inline-flex items-center gap-3 bg-white text-slate-900 font-bold text-lg px-10 py-5 rounded-full hover:shadow-xl border-2 border-slate-200 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
+                    <i data-lucide="play-circle" class="w-5 h-5"></i>
+                    <span>Watch Demo</span>
+                </a>
+            </div>
+
+            <!-- Trust indicators -->
+            <div class="flex flex-wrap items-center justify-center gap-8 text-sm text-slate-500">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-primary"></i>
+                    <span>No commitment required</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-primary"></i>
+                    <span>100% Confidential</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="w-4 h-4 text-primary"></i>
+                    <span>Results in 90 days</span>
+                </div>
+            </div>
         </div>
     </section>
 
 
     <!-- Footer -->
-    <footer class="bg-darker border-t border-slate-800 pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-2">
-                    <a href="#" class="text-2xl font-display font-bold text-white flex items-center gap-2 mb-6">
-                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                            <i data-lucide="activity" class="w-5 h-5"></i>
+    <footer class="bg-white border-t border-slate-100 pt-32 pb-16 relative overflow-hidden">
+        <!-- Subtle mesh glow -->
+        <div
+            class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
+                <div class="md:col-span-5">
+                    <a href="#" class="text-2xl font-display font-bold text-slate-900 flex items-center gap-3 mb-8">
+                        <div
+                            class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center shadow-xl shadow-slate-900/10">
+                            <i data-lucide="activity" class="w-6 h-6 text-white"></i>
                         </div>
-                        Medtime RCM
+                        Medtime <span class="text-primary italic">RCM</span>
                     </a>
-                    <p class="text-slate-400 max-w-sm mb-6 leading-relaxed">
-                        Redefining healthcare finance. We bring enterprise-grade revenue cycle technology to private
-                        practices.
+                    <p class="text-slate-500 max-w-sm mb-10 leading-relaxed text-lg">
+                        The next generation of revenue cycle management. Combining clinical intelligence with
+                        world-class engineering to maximize your practice's potential.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="linkedin"
-                                class="w-5 h-5"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="twitter"
-                                class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-primary hover:bg-primary/10 transition-all duration-300">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-primary hover:bg-primary/10 transition-all duration-300">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div>
-                    <h4 class="text-white font-bold mb-6">Company</h4>
-                    <ul class="space-y-4">
-                        <li><a href="about.html" class="text-slate-400 hover:text-primary transition-colors">About
-                                Us</a></li>
-                        <li><a href="services.html" class="text-slate-400 hover:text-primary transition-colors">Our
-                                Services</a></li>
-                        <li><a href="why-choose-us.html" class="text-slate-400 hover:text-primary transition-colors">Why
-                                Medtime</a></li>
+                <div class="md:col-span-2">
+                    <h4 class="text-slate-900 font-bold mb-8 uppercase text-[11px] tracking-widest">Platform</h4>
+                    <ul class="space-y-5">
+                        <li><a href="services.html"
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">Services</a></li>
+                        <li><a href="why-choose-us.html"
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">The Edge</a></li>
                         <li><a href="contact.html"
-                                class="text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">Pricing</a></li>
                     </ul>
                 </div>
 
-                <div>
-                    <h4 class="text-white font-bold mb-6">Legal</h4>
-                    <ul class="space-y-4">
-                        <li><a href="privacy-policy.html"
-                                class="text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-slate-400 hover:text-primary transition-colors">Terms of
-                                Service</a></li>
-                        <li><span class="text-slate-600 cursor-not-allowed">HIPAA Statement</span></li>
+                <div class="md:col-span-2">
+                    <h4 class="text-slate-900 font-bold mb-8 uppercase text-[11px] tracking-widest">Company</h4>
+                    <ul class="space-y-5">
+                        <li><a href="about.html"
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">About Us</a></li>
+                        <li><a href="contact.html"
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">Contact</a></li>
+                        <li><a href="#" class="text-slate-500 hover:text-primary transition-all text-[15px]">Careers</a>
+                        </li>
                     </ul>
+                </div>
+
+                <div class="md:col-span-3">
+                    <h4 class="text-slate-900 font-bold mb-8 uppercase text-[11px] tracking-widest">Join the Newsletter
+                    </h4>
+                    <p class="text-slate-500 text-sm mb-6">Bi-weekly insights on healthcare finance and RCM
+                        optimization.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Email"
+                            class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
+                        <button class="bg-slate-900 text-white p-2.5 rounded-xl hover:bg-slate-800 transition-colors">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
 
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-slate-500 text-sm">&copy; 2026 Medtime RCM. All rights reserved.</p>
-                <div class="flex items-center gap-2 text-slate-600 text-sm">
-                    <i data-lucide="shield" class="w-4 h-4"></i> HIPAA Compliant
+            <div class="border-t border-slate-100 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-8">
+                    <p class="text-slate-400 text-[13px]">&copy; 2026 Medtime RCM. Fully HIPAA Compliant.</p>
+                    <div class="hidden md:flex items-center gap-6">
+                        <a href="privacy-policy.html"
+                            class="text-slate-400 hover:text-slate-600 transition-all text-[13px]">Privacy</a>
+                        <a href="terms.html"
+                            class="text-slate-400 hover:text-slate-600 transition-all text-[13px]">Terms</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 py-2 px-4 rounded-full bg-slate-50 border border-slate-100">
+                    <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                    <span class="text-[11px] font-bold text-slate-600 uppercase tracking-widest">Systems
+                        Operational</span>
                 </div>
             </div>
         </div>
@@ -556,30 +745,6 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script>
-        lucide.createIcons();
-
-        // Mobile Menu Toggle Logic (Inline for immediate function, can be moved to main.js)
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (menuBtn) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Scroll Reveal Logic (Simple Intersection Observer)
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
-    </script>
 </body>
 
 </html>

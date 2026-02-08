@@ -1,84 +1,84 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Scroll Animations with Intersection Observer
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1 // Trigger when 10% of element is visible
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
+    // 1. Scroll Reveal Animations
+    const revealOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     };
 
-    const animateOnScroll = new IntersectionObserver((entries, observer) => {
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                entry.target.classList.remove('opacity-0', 'translate-y-8'); // Remove initial classes if used directly
-                observer.unobserve(entry.target); // Animate only once
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, revealOptions);
 
-    // Target elements with .scroll-animate class
-    document.querySelectorAll('.scroll-animate').forEach((el) => {
-        animateOnScroll.observe(el);
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        revealObserver.observe(el);
     });
 
-    // 2. Mobile Menu Toggle
+    // 2. Bento Card Mouse Interaction (Stripe-like highlight)
+    const handleMouseMove = (e) => {
+        const { currentTarget: target } = e;
+        const rect = target.getBoundingClientRect(),
+            x = e.clientX - rect.left,
+            y = e.clientY - rect.top;
+
+        target.style.setProperty("--mouse-x", `${x}px`);
+        target.style.setProperty("--mouse-y", `${y}px`);
+    };
+
+    for (const card of document.querySelectorAll(".bento-card")) {
+        card.onmousemove = e => handleMouseMove(e);
+    }
+
+    // 3. Mobile Menu Toggle
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    const closeMenuBtn = document.getElementById('close-menu-btn');
-    
+
     if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('translate-x-full'); // Assuming slide-in from right interaction
-            document.body.classList.toggle('overflow-hidden'); // Prevent background scrolling
+            // Add a simple fade animation
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.style.opacity = '0';
+                mobileMenu.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    mobileMenu.style.transition = 'all 0.3s ease';
+                    mobileMenu.style.opacity = '1';
+                    mobileMenu.style.transform = 'translateY(0)';
+                }, 10);
+            }
         });
 
-        // Close menu when clicking loop link
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && e.target !== menuBtn) {
                 mobileMenu.classList.add('hidden');
-                document.body.classList.remove('overflow-hidden');
-            });
+            }
         });
     }
-
-    if (closeMenuBtn && mobileMenu) {
-        closeMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        });
-    }
-
-
-    // 3. Sticky Navbar on Scroll
-    const header = document.querySelector('header');
-    let lastScrollTop = 0;
-
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > 50) {
-            header.classList.add('shadow-md', 'bg-white/95', 'backdrop-blur-sm');
-        } else {
-            header.classList.remove('shadow-md', 'bg-white/95', 'backdrop-blur-sm');
-        }
-        
-        lastScrollTop = scrollTop;
-    });
 
     // 4. Smooth Scroll for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
-                const headerOffset = 80; // Approximate header height
+                const headerOffset = 100;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    
+
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: "smooth"
