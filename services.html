@@ -4,416 +4,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive RCM Services - Medical Billing & Coding | Medtime</title>
+    <title>Enterprise RCM Solutions - Medtime RCM</title>
     <meta name="description"
-        content="Explore our full suite of RCM services: Medical Coding, Claims Submission, Denial Management, A/R Recovery, Credentialing, and Reporting.">
-    <meta name="keywords"
-        content="medical coding services, denial management, claims submission, A/R recovery, credentialing services">
-    <link rel="canonical" href="https://medtimercm.com/services.html">
+        content="Our comprehensive suite of medical billing, coding, and credentialing services optimized for the modern practice.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Comprehensive RCM Services - Medtime RCM">
-    <meta property="og:description" content="End-to-end revenue cycle management solutions for your practice.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://medtimercm.com/services.html">
-
-    <!-- Fonts -->
+    <!-- Fonts & CSS -->
     <link rel="stylesheet" href="css/custom.css">
-
-    <!-- Tailwind CSS (CDN for Dev) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#0066CC',
-                        'primary-dark': '#004A99',
-                        'accent': '#00A86B',
-                        'neutral': '#F5F7FA',
-                        'dark': '#1A1A1A',
+                        'primary': '#0D9488',
+                        'secondary': '#0EA5E9',
+                        'accent': '#F97316',
                     },
                     fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Plus Jakarta Sans', 'sans-serif'],
+                        'sans': ['DM Sans', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Revenue Cycle Management",
-      "provider": {
-        "@type": "MedicalBusiness",
-        "name": "Medtime RCM"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Medical Billing Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Medical Coding"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Claims Management"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Denial Management"
-            }
-          }
-        ]
-      }
-    }
-    </script>
-
-    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="font-sans text-gray-800 antialiased">
+<body class="font-sans text-slate-900 bg-white antialiased">
 
-    <!-- Navigation -->
-    <header
-        class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-gray-100"
-        id="main-header">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-primary flex items-center gap-2">
-                        <i data-lucide="activity" class="w-8 h-8"></i>
-                        Medtime RCM
-                    </a>
-                </div>
-                <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="about.html"
-                        class="text-gray-600 hover:text-primary font-medium transition-colors">About</a>
-                    <a href="services.html" class="text-primary font-medium transition-colors">Services</a>
-                    <a href="why-choose-us.html"
-                        class="text-gray-600 hover:text-primary font-medium transition-colors">Why Us</a>
-                    <a href="contact.html"
-                        class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                        Free Assessment
-                    </a>
-                </nav>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
-                        <i data-lucide="menu" class="w-8 h-8"></i>
-                    </button>
-                </div>
+    <!-- Navigation (Synced with Landing) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 w-full py-6 pointer-events-none">
+        <div
+            class="bg-white/70 rounded-full px-8 py-3 flex items-center justify-between w-full max-w-5xl shadow-[0_8px_32px_rgba(0,0,0,0.04)] border border-white/40 relative overflow-hidden backdrop-blur-2xl pointer-events-auto group/nav transition-all duration-500 hover:shadow-[0_12px_48px_rgba(0,0,0,0.06)]">
+            <div class="flex items-center gap-3 z-10">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div
+                        class="w-9 h-9 bg-slate-900 rounded-xl flex items-center justify-center text-white shadow-lg transition-transform hover:scale-105">
+                        <i data-lucide="activity" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xl font-display font-bold tracking-tight text-slate-900">Medtime<span
+                            class="text-primary italic">RCM</span></span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10">
+                <a href="about.html"
+                    class="text-[13px] font-semibold text-slate-500 hover:text-primary transition-all duration-300 tracking-wide uppercase">About</a>
+                <a href="services.html"
+                    class="text-[13px] font-semibold text-primary transition-all duration-300 tracking-wide uppercase underline underline-offset-8">Services</a>
+                <a href="why-choose-us.html"
+                    class="text-[13px] font-semibold text-slate-500 hover:text-primary transition-all duration-300 tracking-wide uppercase">Why
+                    Us</a>
+            </div>
+
+            <div class="hidden md:block z-10">
+                <a href="contact.html"
+                    class="bg-slate-900 text-white text-[13px] font-bold px-6 py-2.5 rounded-full transition-all duration-300 hover:bg-slate-800 shadow-md">Get
+                    Audit</a>
+            </div>
+
+            <div class="md:hidden flex items-center pointer-events-auto">
+                <button id="mobile-menu-btn" class="text-slate-900 p-1">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
         </div>
+
         <div id="mobile-menu"
-            class="hidden md:hidden absolute top-20 left-0 w-full bg-white shadow-xl border-t border-gray-100 p-4 flex flex-col space-y-4">
-            <a href="about.html"
-                class="block text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-50">About</a>
-            <a href="services.html" class="block text-primary font-medium py-2 border-b border-gray-50">Services</a>
-            <a href="why-choose-us.html"
-                class="block text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-50">Why Us</a>
-            <a href="contact.html"
-                class="block bg-primary text-white text-center py-3 rounded-lg font-semibold mt-4">Free Assessment</a>
+            class="hidden absolute top-24 left-4 right-4 bg-white/95 backdrop-blur-xl border border-slate-200 rounded-3xl p-6 flex flex-col space-y-4 shadow-2xl z-40 pointer-events-auto">
+            <a href="about.html" class="text-lg font-semibold text-slate-900 py-3 border-b border-slate-100">About</a>
+            <a href="services.html"
+                class="text-lg font-semibold text-primary py-3 border-b border-slate-100">Services</a>
+            <a href="why-choose-us.html" class="text-lg font-semibold text-slate-900 py-3 border-b border-slate-100">Why
+                Us</a>
+            <a href="contact.html" class="bg-primary text-center text-white font-bold py-4 rounded-2xl mt-4">Get
+                Audit</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+        class="relative pt-48 pb-32 overflow-hidden mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center lg:text-left">
+        <div class="enterprise-mesh opacity-40"></div>
+        <div class="max-w-4xl">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-8 font-display font-bold text-[11px] text-primary tracking-widest uppercase scroll-reveal">
+                Full Service Ecosystem</div>
+            <h1
+                class="text-5xl md:text-7xl font-display font-extrabold text-slate-900 mb-8 tracking-tight scroll-reveal delay-100">
+                Revenue Cycle <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Reimagined.</span>
+            </h1>
+            <p
+                class="text-xl text-slate-500 mb-12 max-w-2xl leading-relaxed font-medium scroll-reveal delay-200 mx-auto lg:mx-0">
+                From complex coding audits to aggressive A/R recovery, we provide the enterprise infrastructure your
+                practice deserves.</p>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="pt-32 pb-20 bg-neutral text-center">
+    <!-- Services Grid -->
+    <section class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6 scroll-animate">Our Services</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8 scroll-animate delay-100">
-                A complete suite of revenue cycle management solutions designed to improve your practice's financial
-                health, from patient intake to final payment.
-            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Medical Coding -->
+                <div
+                    class="bento-card group bg-slate-50 border border-slate-200/60 rounded-[2.5rem] p-10 flex flex-col scroll-reveal">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary shadow-sm mb-8 transition-transform group-hover:scale-110">
+                        <i data-lucide="file-code" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-extrabold text-slate-900 mb-4 tracking-tight">Precision Coding
+                    </h3>
+                    <p class="text-slate-500 leading-relaxed mb-8 flex-1">Certified CPC & AHIMA experts specializing in
+                        multi-specialty coding to ensure 99%+ accuracy and compliance.</p>
+                    <ul class="space-y-3 border-t border-slate-200 pt-8">
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Specialty-Specific Audits</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> HCC Risk Adjustment</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> 24h Turnaround Time</li>
+                    </ul>
+                </div>
+
+                <!-- Claims Management -->
+                <div
+                    class="bento-card group bg-slate-50 border border-slate-200/60 rounded-[2.5rem] p-10 flex flex-col scroll-reveal delay-100">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-secondary shadow-sm mb-8 transition-transform group-hover:scale-110">
+                        <i data-lucide="send" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-extrabold text-slate-900 mb-4 tracking-tight">Clean
+                        Submissions</h3>
+                    <p class="text-slate-500 leading-relaxed mb-8 flex-1">Predictive scrubbing catches errors before
+                        they reach the payer, maximizing your first-pass payment rate.</p>
+                    <ul class="space-y-3 border-t border-slate-200 pt-8">
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Daily Batch Processing</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Clearinghouse Oversight</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> 99.2% Clean Rate</li>
+                    </ul>
+                </div>
+
+                <!-- Denial Management -->
+                <div
+                    class="bento-card group bg-slate-50 border border-slate-200/60 rounded-[2.5rem] p-10 flex flex-col scroll-reveal delay-200">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-red-500 shadow-sm mb-8 transition-transform group-hover:scale-110">
+                        <i data-lucide="shield-alert" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-extrabold text-slate-900 mb-4 tracking-tight">Denial Recovery
+                    </h3>
+                    <p class="text-slate-500 leading-relaxed mb-8 flex-1">Proactive root-cause analysis and aggressive
+                        appeals to recover revenue from complex denials.</p>
+                    <ul class="space-y-3 border-t border-slate-200 pt-8">
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Root-Cause Analytics</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Timely Appeals (24h)</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Payer Follow-up</li>
+                    </ul>
+                </div>
+
+                <!-- A/R Management -->
+                <div
+                    class="bento-card group bg-slate-50 border border-slate-200/60 rounded-[2.5rem] p-10 flex flex-col scroll-reveal">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-purple-600 shadow-sm mb-8 transition-transform group-hover:scale-110">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-extrabold text-slate-900 mb-4 tracking-tight">A/R Acceleration
+                    </h3>
+                    <p class="text-slate-500 leading-relaxed mb-8 flex-1">Active aging monitoring and systematic
+                        resolution of outstanding balances to reduce days in A/R.</p>
+                    <ul class="space-y-3 border-t border-slate-200 pt-8">
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Claims > 30 Days</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Patient Statements</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Eligibility Checks</li>
+                    </ul>
+                </div>
+
+                <!-- Credentialing -->
+                <div
+                    class="bento-card group bg-slate-50 border border-slate-200/60 rounded-[2.5rem] p-10 flex flex-col scroll-reveal delay-100">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent shadow-sm mb-8 transition-transform group-hover:scale-110">
+                        <i data-lucide="badge-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-extrabold text-slate-900 mb-4 tracking-tight">Credentialing
+                    </h3>
+                    <p class="text-slate-500 leading-relaxed mb-8 flex-1">End-to-end enrollment and CAQH maintenance to
+                        keep your providers in-network and authorized.</p>
+                    <ul class="space-y-3 border-t border-slate-200 pt-8">
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> New Enrollment</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> CAQH Maintenance</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Data Re-validation</li>
+                    </ul>
+                </div>
+
+                <!-- Reporting -->
+                <div
+                    class="bento-card group bg-slate-50 border border-slate-200/60 rounded-[2.5rem] p-10 flex flex-col scroll-reveal delay-200">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-teal-600 shadow-sm mb-8 transition-transform group-hover:scale-110">
+                        <i data-lucide="pie-chart" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-extrabold text-slate-900 mb-4 tracking-tight">Intelligence
+                    </h3>
+                    <p class="text-slate-500 leading-relaxed mb-8 flex-1">Real-time dashboards and comprehensive monthly
+                        reports providing full visibility into practice health.</p>
+                    <ul class="space-y-3 border-t border-slate-200 pt-8">
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Monthly Performance</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Provider KPIs</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-600"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500"></i> Custom Analytics</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Detailed Services -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-
-            <!-- Service 1: Medical Coding -->
-            <div id="coding" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-animate">
-                <div class="order-2 lg:order-1">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-primary mb-6">
-                        <i data-lucide="file-text" class="w-8 h-8"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4">Unmatched Medical Coding Accuracy</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Our certified coders (CPC, AHIMA) ensure that every diagnosis and procedure is coded accurately
-                        to the highest specificity. We stay up-to-date with the latest ICD-10, CPT, and HCPCS changes to
-                        prevent denials before they happen.
+    <!-- Deep Integration Section -->
+    <section class="py-32 bg-slate-900 overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="scroll-reveal">
+                    <h2
+                        class="text-4xl md:text-5xl font-display font-extrabold text-white mb-8 tracking-tight leading-tight">
+                        Proactive Denial Defense <br /> <span class="text-primary italic">& Recovery.</span></h2>
+                    <p class="text-xl text-slate-400 mb-10 leading-relaxed">Most practices lose 5-10% of revenue to
+                        ignored denials. We recover every dollar by integrating directly with your clinical workflows.
                     </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Audit-ready documentation and compliance checks.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Specialty-specific coding expertise.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Regular feedback loops to improve documentation.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="order-1 lg:order-2 bg-neutral p-8 rounded-3xl">
-                    <!-- Illustration placeholder -->
-                    <div
-                        class="aspect-video bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
-                        <div class="text-center">
-                            <i data-lucide="file-check" class="w-16 h-16 mx-auto mb-2 opacity-50"></i>
-                            <span>Coding Workflow Visualization</span>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary mt-1 flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <p class="text-slate-300 font-medium">Root cause analysis performed on every single denial.
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary mt-1 flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <p class="text-slate-300 font-medium">Timely appeals within 24 hours of notification.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary mt-1 flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <p class="text-slate-300 font-medium">Direct payer follow-up until claim is paid in full.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Service 2: Claims Management -->
-            <div id="claims" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-animate">
-                <div class="lg:order-1 bg-neutral p-8 rounded-3xl">
+                <div class="relative scroll-reveal delay-200">
                     <div
-                        class="aspect-video bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
-                        <div class="text-center">
-                            <i data-lucide="send" class="w-16 h-16 mx-auto mb-2 opacity-50"></i>
-                            <span>Claims Submission Process</span>
+                        class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[3rem] p-12 text-center group transition-all duration-700 hover:bg-white/10">
+                        <div
+                            class="text-7xl font-display font-black text-white mb-4 group-hover:scale-110 transition-transform">
+                            15%</div>
+                        <div class="text-xl font-bold text-primary uppercase tracking-widest mb-6">Average Revenue Lift
                         </div>
-                    </div>
-                </div>
-                <div class="lg:order-2">
-                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-accent mb-6">
-                        <i data-lucide="send" class="w-8 h-8"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4">Fast & Clean Claims Submission</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        We scrub every claim for errors prior to submission, resulting in a 99% clean claim rate.
-                        Whether electronic or paper, we ensure your claims reach payers quickly for faster
-                        reimbursement.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Daily submission of claims within 24-48 hours.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Electronic clearinghouse integration.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Immediate correction of front-end rejections.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Service 3: Denial Management -->
-            <div id="denials" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-animate">
-                <div class="order-2 lg:order-1">
-                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center text-red-600 mb-6">
-                        <i data-lucide="alert-triangle" class="w-8 h-8"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4">Aggressive Denial Management</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Don't let denials eat into your revenue. We analyze the root cause of every denial and launch
-                        strategic appeals to recover what you are owed.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Root cause analysis to prevent recurrence.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Timely filing of appeals.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Detailed denial reporting by payer and reason.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="order-1 lg:order-2 bg-neutral p-8 rounded-3xl">
-                    <div
-                        class="aspect-video bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
-                        <div class="text-center">
-                            <i data-lucide="shield-alert" class="w-16 h-16 mx-auto mb-2 opacity-50"></i>
-                            <span>Denial Recovery Stats</span>
-                        </div>
+                        <p class="text-slate-400">Within the first 120 days of partnership.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Service 4: A/R Management -->
-            <div id="ar" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-animate">
-                <div class="lg:order-1 bg-neutral p-8 rounded-3xl">
-                    <div
-                        class="aspect-video bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
-                        <div class="text-center">
-                            <i data-lucide="trending-up" class="w-16 h-16 mx-auto mb-2 opacity-50"></i>
-                            <span>Aging Report Graphic</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:order-2">
-                    <div
-                        class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 mb-6">
-                        <i data-lucide="dollar-sign" class="w-8 h-8"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4">Proactive A/R Follow-Up</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        We don't just bill; we collect. Our team actively monitors aging accounts and contacts payers to
-                        resolve outstanding balances, significantly reducing your days in A/R.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Systematic follow-up on all claims > 30 days.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Patient statement management.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Insurance verification and eligibility checks.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Service 5: Provider Credentialing -->
-            <div id="credentialing" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-animate">
-                <div class="order-2 lg:order-1">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-primary mb-6">
-                        <i data-lucide="badge-check" class="w-8 h-8"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4">Streamlined Provider Credentialing</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Getting empanelled with payers is critical for your revenue. We handle the tedious paperwork for
-                        new enrollments and re-credentialing, ensuring you stay in-network and get paid.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">End-to-end enrollment application management.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">CAQH profile setup and maintenance.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Tracking of re-validation dates to prevent lapses.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="order-1 lg:order-2 bg-neutral p-8 rounded-3xl">
-                    <div
-                        class="aspect-video bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
-                        <div class="text-center">
-                            <i data-lucide="file-signature" class="w-16 h-16 mx-auto mb-2 opacity-50"></i>
-                            <span>Credentialing Status Tracker</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service 6: Reporting & Analytics -->
-            <div id="reporting" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-animate">
-                <div class="lg:order-1 bg-neutral p-8 rounded-3xl">
-                    <div
-                        class="aspect-video bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
-                        <div class="text-center">
-                            <i data-lucide="bar-chart-2" class="w-16 h-16 mx-auto mb-2 opacity-50"></i>
-                            <span>Financial Dashboard</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:order-2">
-                    <div class="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6">
-                        <i data-lucide="pie-chart" class="w-8 h-8"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4">Transparent Reporting & Analytics</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Data is power. We provide you with comprehensive monthly reports and real-time dashboards so you
-                        can track your practice's financial health and identify trends.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Key Performance Indicators (KPI) tracking.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Monthly financial performance reviews.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Customizable reports by payer, provider, or CPT code.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Footer (Same as index) -->
-    <footer class="bg-dark text-gray-400 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div class="col-span-1 md:col-span-2">
-                    <a href="index.html" class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
-                        <i data-lucide="activity" class="w-6 h-6 text-primary"></i>
-                        Medtime RCM
+    <!-- Footer (Synced with index.html) -->
+    <footer class="bg-white border-t border-slate-100 pt-32 pb-16 relative overflow-hidden">
+        <div
+            class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
+                <div class="md:col-span-12 lg:col-span-5">
+                    <a href="index.html"
+                        class="text-2xl font-display font-bold text-slate-900 flex items-center gap-3 mb-8">
+                        <div
+                            class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center shadow-xl shadow-slate-900/10">
+                            <i data-lucide="activity" class="w-6 h-6 text-white"></i>
+                        </div>
+                        Medtime <span class="text-primary italic">RCM</span>
                     </a>
-                    <p class="mb-4 max-w-sm">Professional revenue cycle management solutions designed to streamline your
-                        practice's financial health.</p>
+                    <p class="text-slate-500 max-w-sm mb-10 leading-relaxed text-lg">Next generation revenue cycle
+                        management. Clinical intelligence paired with world-class engineering.</p>
                 </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="services.html" class="text-primary transition-colors">Services</a></li>
-                        <li><a href="why-choose-us.html" class="hover:text-primary transition-colors">Why Choose Us</a>
+                <div class="md:col-span-4 lg:col-span-2">
+                    <h4 class="text-slate-900 font-bold mb-8 uppercase text-[11px] tracking-widest">Platform</h4>
+                    <ul class="space-y-4">
+                        <li><a href="services.html"
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">Services</a></li>
+                        <li><a href="why-choose-us.html"
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">The Edge</a></li>
+                        <li><a href="contact.html"
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-4 lg:col-span-2">
+                    <h4 class="text-slate-900 font-bold mb-8 uppercase text-[11px] tracking-widest">Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="about.html"
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">About Us</a></li>
+                        <li><a href="contact.html"
+                                class="text-slate-500 hover:text-primary transition-all text-[15px]">Contact</a></li>
+                        <li><a href="#" class="text-slate-500 hover:text-primary transition-all text-[15px]">Careers</a>
                         </li>
-                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="hover:text-primary transition-colors">Privacy
-                                Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-primary transition-colors">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">HIPAA Compliance</a></li>
-                    </ul>
+                <div class="md:col-span-4 lg:col-span-3">
+                    <h4 class="text-slate-900 font-bold mb-8 uppercase text-[11px] tracking-widest">Global Status</h4>
+                    <div
+                        class="flex items-center gap-4 py-2 px-4 rounded-full bg-slate-50 border border-slate-100 w-fit">
+                        <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                        <span class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">Systems
+                            Operational</span>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center bg-dark">
-                <p>&copy; 2026 Medtime RCM. All rights reserved.</p>
+            <div class="border-t border-slate-100 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-slate-400 text-[13px]">&copy; 2026 Medtime RCM. HIPAA Compliant Revenue Engine.</p>
+                <div class="flex gap-6">
+                    <a href="privacy-policy.html"
+                        class="text-slate-400 hover:text-slate-600 transition-all text-[13px]">Privacy</a>
+                    <a href="terms.html"
+                        class="text-slate-400 hover:text-slate-600 transition-all text-[13px]">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 
 </html>
