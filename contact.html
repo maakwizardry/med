@@ -7,99 +7,94 @@
     <title>Contact Medtime RCM - Free Medical Billing Assessment</title>
     <meta name="description"
         content="Get in touch with Medtime RCM for a free consultation. Contact our expert team to learn how we can improve your practice's revenue cycle.">
-    <meta name="keywords"
-        content="contact medtime rcm, medical billing assessment, rcm consultation, revenue cycle query">
-    <link rel="canonical" href="https://medtimercm.com/contact.html">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Contact Medtime RCM">
-    <meta property="og:description" content="Ready to optimize your revenue cycle? Contact us today.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://medtimercm.com/contact.html">
-
-    <!-- Fonts -->
+    <!-- Styles -->
     <link rel="stylesheet" href="css/custom.css">
-
-    <!-- Tailwind CSS (CDN for Dev) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#0066CC',
-                        'primary-dark': '#004A99',
-                        'accent': '#00A86B',
-                        'neutral': '#F5F7FA',
-                        'dark': '#1A1A1A',
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="tailwind.config.js"></script>
+
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="font-sans text-gray-800 antialiased">
+<body class="font-sans text-slate-900 bg-white antialiased">
 
-    <!-- Navigation -->
-    <header
-        class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-gray-100"
-        id="main-header">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-primary flex items-center gap-2">
-                        <i data-lucide="activity" class="w-8 h-8"></i>
-                        Medtime RCM
-                    </a>
-                </div>
-                <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="about.html"
-                        class="text-gray-600 hover:text-primary font-medium transition-colors">About</a>
-                    <a href="services.html"
-                        class="text-gray-600 hover:text-primary font-medium transition-colors">Services</a>
-                    <a href="why-choose-us.html"
-                        class="text-gray-600 hover:text-primary font-medium transition-colors">Why Us</a>
-                    <a href="contact.html"
-                        class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                        Free Assessment
-                    </a>
-                </nav>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
-                        <i data-lucide="menu" class="w-8 h-8"></i>
-                    </button>
-                </div>
+    <!-- Navigation (Synced) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 w-full py-6 pointer-events-none">
+        <div
+            class="bg-white/70 rounded-full px-8 py-3 flex items-center justify-between w-full max-w-5xl shadow-[0_8px_32px_rgba(0,0,0,0.04)] border border-white/40 relative overflow-hidden backdrop-blur-2xl pointer-events-auto group/nav transition-all duration-500 hover:shadow-[0_12px_48px_rgba(0,0,0,0.06)]">
+            <div class="flex items-center gap-3 z-10">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div
+                        class="w-9 h-9 bg-slate-900 rounded-xl flex items-center justify-center text-white shadow-lg transition-transform hover:scale-105">
+                        <i data-lucide="activity" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xl font-display font-bold tracking-tight text-slate-900">Medtime<span
+                            class="text-primary italic">RCM</span></span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10">
+                <a href="about.html"
+                    class="text-[13px] font-semibold text-slate-500 hover:text-primary transition-all duration-300 tracking-wide uppercase">About</a>
+                <a href="services.html"
+                    class="text-[13px] font-semibold text-slate-500 hover:text-primary transition-all duration-300 tracking-wide uppercase">Services</a>
+                <a href="why-choose-us.html"
+                    class="text-[13px] font-semibold text-slate-500 hover:text-primary transition-all duration-300 tracking-wide uppercase">Why
+                    Us</a>
+            </div>
+
+            <div class="hidden md:block z-10">
+                <a href="contact.html"
+                    class="bg-slate-900 text-white text-[13px] font-bold px-6 py-2.5 rounded-full transition-all duration-300 hover:bg-slate-800 shadow-md">Get
+                    Audit</a>
+            </div>
+
+            <div class="md:hidden flex items-center pointer-events-auto">
+                <button id="mobile-menu-btn" class="text-slate-900 p-1">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
         </div>
+
         <div id="mobile-menu"
-            class="hidden md:hidden absolute top-20 left-0 w-full bg-white shadow-xl border-t border-gray-100 p-4 flex flex-col space-y-4">
-            <a href="about.html"
-                class="block text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-50">About</a>
+            class="hidden absolute top-24 left-4 right-4 bg-white/95 backdrop-blur-xl border border-slate-200 rounded-3xl p-6 flex flex-col space-y-4 shadow-2xl z-40 pointer-events-auto">
+            <a href="about.html" class="text-lg font-semibold text-slate-900 py-3 border-b border-slate-100">About</a>
             <a href="services.html"
-                class="block text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-50">Services</a>
-            <a href="why-choose-us.html"
-                class="block text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-50">Why Us</a>
-            <a href="contact.html"
-                class="block bg-primary text-white text-center py-3 rounded-lg font-semibold mt-4">Free Assessment</a>
+                class="text-lg font-semibold text-slate-900 py-3 border-b border-slate-100">Services</a>
+            <a href="why-choose-us.html" class="text-lg font-semibold text-slate-900 py-3 border-b border-slate-100">Why
+                Us</a>
+            <a href="contact.html" class="bg-primary text-center text-white font-bold py-4 rounded-2xl mt-4">Get
+                Audit</a>
         </div>
-    </header>
+    </nav>
 
     <!-- Page Header -->
-    <section class="pt-32 pb-20 bg-neutral text-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6 scroll-animate">Get Your Free Assessment</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8 scroll-animate delay-100">
-                Let's discuss your practice's needs. Fill out the form below, and our team will be in touch within 24
-                hours.
-            </p>
+    <header class="relative pt-48 pb-32 overflow-hidden mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <div class="enterprise-mesh opacity-40"></div>
+
+        <!-- High-Impact Decorative Layer (Minimalist Glow Runners) -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <!-- Glow Runners -->
+            <div class="glow-runner runner-h animate-rtl top-[10%] left-0"></div>
+            <div class="glow-runner runner-h animate-ltr bottom-[15%] left-0"></div>
+            <div class="glow-runner runner-v animate-ttb left-[5%] top-0"></div>
+            <div class="glow-runner runner-v animate-btt right-[5%] top-0"></div>
         </div>
-    </section>
+
+        <div class="max-w-3xl mx-auto relative z-10">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-8 font-display font-bold text-[11px] text-primary tracking-widest uppercase scroll-reveal">
+                Get Started</div>
+            <h1
+                class="text-5xl md:text-7xl font-display font-extrabold text-slate-900 mb-8 tracking-tight scroll-reveal delay-100">
+                Get Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Free
+                    Assessment.</span></h1>
+            <p class="text-xl text-slate-500 max-w-2xl leading-relaxed font-medium scroll-reveal delay-200 mx-auto">
+                Let's discuss your practice's needs. Fill out the form below, and our team will be in touch within 24
+                hours.</p>
+        </div>
+    </header>
 
     <!-- Contact Section -->
     <section class="py-20 bg-white">

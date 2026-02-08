@@ -86,4 +86,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 5. Hero Background Mouse Tracking
+    const heroHeader = document.querySelector('header.relative');
+    if (heroHeader) {
+        heroHeader.addEventListener('mousemove', (e) => {
+            const rect = heroHeader.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            heroHeader.style.setProperty("--mouse-x", `${x}px`);
+            heroHeader.style.setProperty("--mouse-y", `${y}px`);
+        });
+    }
+
+    // 6. Scroll Runner Activation
+    const runners = document.querySelectorAll('.glow-runner');
+    let scrollTimeout;
+
+    window.addEventListener('scroll', () => {
+        runners.forEach(runner => runner.classList.add('active'));
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            runners.forEach(runner => runner.classList.remove('active'));
+        }, 500); // Pulse stays for 500ms after scroll stops
+    });
 });
